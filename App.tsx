@@ -20,9 +20,14 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import AppNavContainer from './src/navigations';
+import GlobalProvider from './src/context/Provider';
 
 const App = () => {
-  return <AppNavContainer></AppNavContainer>;
+  return (
+    <GlobalProvider>
+      <AppNavContainer />
+    </GlobalProvider>
+  );
 };
 
 export default App;
